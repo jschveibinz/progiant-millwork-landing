@@ -32,6 +32,8 @@ contactForm.addEventListener('submit', async (event) => {
 
   const button = contactForm.querySelector('button[type="submit"]');
   const originalLabel = button.innerHTML;
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 15000);
   button.disabled = true;
   button.textContent = 'Sending…';
   contactError.hidden = true;
@@ -41,6 +43,7 @@ contactForm.addEventListener('submit', async (event) => {
       method: 'POST',
       headers: { Accept: 'application/json' },
       body: new FormData(contactForm),
+      signal: controller.signal,
     });
     if (!response.ok) throw new Error('Submission failed');
     contactForm.reset();
@@ -48,7 +51,11 @@ contactForm.addEventListener('submit', async (event) => {
     contactSuccess.hidden = false;
   } catch {
     contactError.hidden = false;
-    button.disabled = false;
-    button.innerHTML = originalLabel;
+  } finally {
+    window.clearTimeout(timeout);
+    if (!contactForm.hidden) {
+      button.disabled = false;
+      button.innerHTML = originalLabel;
+    }
   }
 });
