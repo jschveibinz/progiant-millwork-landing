@@ -103,6 +103,8 @@ button:disabled{cursor:wait;opacity:.72;transform:none}
 .questionnaire-success h2{font-size:38px;margin:10px 0}
 .questionnaire-success p{color:#596169;line-height:1.6}
 .questionnaire-success .card-cta{width:max-content;margin:26px auto 0}
+.questionnaire-success.inline-success{padding:30px;margin-top:4px;box-shadow:8px 8px 0 var(--lime)}
+.questionnaire-success.inline-success h2{font-size:30px}
 .questionnaire-panel{padding:70px max(22px,calc((100vw - 1116px)/2));background:#eef6da;border-top:1px solid #c9d4a8;border-bottom:1px solid #c9d4a8}
 .questionnaire-panel[hidden]{display:none}
 .questionnaire-panel-heading{position:relative;margin-bottom:24px;padding-right:100px}

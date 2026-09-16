@@ -18,32 +18,22 @@ form.addEventListener('submit', async (event) => {
 
   const button = form.querySelector('button[type="submit"]');
   const originalLabel = button.innerHTML;
-  const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 15000);
   button.disabled = true;
   button.textContent = 'Sending project context…';
   error.hidden = true;
 
   try {
-    const response = await fetch('https://formsubmit.co/ajax/info@71systems.com', {
+    await fetch('https://formsubmit.co/info@71systems.com', {
       method: 'POST',
-      headers: { Accept: 'application/json' },
       body: new FormData(form),
-      signal: controller.signal,
+      mode: 'no-cors',
     });
-    if (!response.ok) throw new Error('Submission failed');
     form.reset();
-    form.hidden = true;
     success.hidden = false;
-    success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    button.textContent = 'Project context sent ✓';
   } catch {
     error.hidden = false;
-    error.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  } finally {
-    window.clearTimeout(timeout);
-    if (!form.hidden) {
-      button.disabled = false;
-      button.innerHTML = originalLabel;
-    }
+    button.disabled = false;
+    button.innerHTML = originalLabel;
   }
 });
