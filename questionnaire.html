@@ -14,7 +14,6 @@
   <section class="questionnaire-intro"><p class="eyebrow"><span></span>Project-profit review</p><h1>Help us understand the job before we talk.</h1><p class="subhead">The questions below establish the scope, schedule, handoffs and commercial conditions that shape millwork profitability. Estimates are fine. We will use your answers to prepare a focused follow-up discussion—not to judge project performance from a distance.</p><div class="questionnaire-notes"><span>8–12 minutes</span><span>One job or a related group</span><span>No document upload</span></div></section>
 
   <section class="questionnaire-wrap">
-    <div id="questionnaire-success" class="questionnaire-success" role="status" hidden><span aria-hidden="true">✓</span><p class="mini-label">Questionnaire received</p><h2>We have the project context.</h2><p>The PRO•GIANT team will review your answers and use them to prepare the follow-up discussion.</p><a class="card-cta" href="index.html">Return to the overview</a></div>
     <form id="questionnaire-form" class="questionnaire-form">
       <input type="hidden" name="_subject" value="New PRO•GIANT architectural millwork project-profit questionnaire">
       <input type="hidden" name="_template" value="table">
@@ -35,7 +34,9 @@
 
       <fieldset><legend><span>07</span> Desired review outcome</legend><label for="question">What question should the review help management answer?</label><textarea id="question" name="management_question" required rows="4" placeholder="For example: Where did this project first move off plan, what value is still recoverable, and what control should change on the next job?"></textarea><label for="context">Anything else we should understand before the conversation? <span class="optional">Optional</span></label><textarea id="context" name="additional_context" rows="4"></textarea><label class="consent"><input type="checkbox" name="consent" value="Agreed" required> I agree that PRO•GIANT and 71 Systems Corporation may use these answers to prepare and follow up about a project-profit review.</label><p class="safety-note">Please do not include confidential drawings, contracts, employee information or privileged communications. We can arrange a secure document exchange later if needed.</p></fieldset>
 
-      <div class="submit-panel"><div><p class="mini-label">Ready for review</p></div><button type="submit">Send project context <span aria-hidden="true">→</span></button></div><p id="questionnaire-error" class="form-error" role="alert" hidden>We couldn’t send the questionnaire. Please try again.</p>
+      <div class="submit-panel"><div><p class="mini-label">Ready for review</p></div><button type="submit">Send project context <span aria-hidden="true">→</span></button></div>
+      <div id="questionnaire-success" class="questionnaire-success inline-success" role="status" hidden><span aria-hidden="true">✓</span><p class="mini-label">Questionnaire sent</p><h2>Thank you. We have the project context.</h2><p>The PRO•GIANT team will review your answers and use them to prepare the follow-up discussion.</p></div>
+      <p id="questionnaire-error" class="form-error" role="alert" hidden>We couldn’t send the questionnaire. Please try again.</p>
     </form>
   </section>
   <footer><span>© 2026 PRO•GIANT · A division of 71 Systems Corporation</span></footer>
