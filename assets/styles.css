@@ -14,6 +14,8 @@ a{color:inherit}
 .eyebrow,.section-kicker,.mini-label{text-transform:uppercase;letter-spacing:.15em;font-size:12px;font-weight:800;color:#485157}
 .eyebrow{display:flex;align-items:center;gap:10px}
 .eyebrow span{width:28px;height:3px;background:var(--lime)}
+.hero .eyebrow{display:block}
+.hero .eyebrow span{display:none}
 h1{font-weight:800;font-size:clamp(44px,5.2vw,66px);line-height:1;letter-spacing:-.055em;margin:24px 0 28px;max-width:780px}
 .subhead{max-width:670px;color:#485157;font-size:20px;line-height:1.63}
 .proof-line{display:flex;align-items:center;gap:15px;margin-top:34px;max-width:610px}
@@ -61,7 +63,8 @@ button:disabled{cursor:wait;opacity:.72;transform:none}
 .capability-list li{display:grid;grid-template-columns:minmax(190px,.5fr) 1.5fr;gap:32px;padding:24px 0;border-bottom:1px solid var(--line);align-items:start}
 .capability-list strong{font-size:18px;line-height:1.35}
 .capability-list span{font-size:16px;line-height:1.65;color:#4d565b}
-.approach{max-width:900px;margin:0 auto;padding:96px 32px}
+.approach{max-width:900px;margin:0 auto;padding:96px 32px;position:relative}
+.approach:before{content:'';position:absolute;width:220px;height:220px;right:-250px;top:48px;border:58px solid var(--cyan);border-radius:50%;z-index:-1}
 .approach h2{margin-bottom:25px}
 .approach>p:last-child{font-size:19px;line-height:1.75;color:#4d565b}
 .final-cta{background:var(--cyan);padding:72px 32px;text-align:center}
@@ -130,6 +133,7 @@ h1{font-size:50px}
 .questionnaire-panel{padding-top:52px;padding-bottom:58px}
 .questionnaire-panel iframe{box-shadow:7px 7px 0 var(--ink)}
 .capability-list li{grid-template-columns:1fr;gap:8px}
+.approach:before{display:none}
 }
 @media(max-width:460px){h1{font-size:42px}
 .subhead{font-size:17px}
