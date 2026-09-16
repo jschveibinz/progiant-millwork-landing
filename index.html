@@ -28,6 +28,8 @@
       <p class="form-intro">Tell us what is getting in the way. We’ll follow up to learn more about what you’re seeing.</p>
       <form id="contact-form">
         <input type="hidden" name="_subject" value="New PRO•GIANT millwork information request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
         <input class="hp-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label for="contact-name">Name</label>
         <input id="contact-name" name="name" autocomplete="name" required>
@@ -36,7 +38,7 @@
         <label for="contact-email">Work email</label>
         <input id="contact-email" name="email" type="email" autocomplete="email" required>
         <label for="contact-issue">What is getting in the way?</label>
-        <select id="contact-issue" name="issue" required>
+        <select id="contact-issue" name="What is getting in the way" required>
           <option value="">Select an issue</option>
           <option>Estimating and handoff</option>
           <option>Project management capacity or consistency</option>
@@ -48,7 +50,7 @@
           <option>Not sure yet - I want to talk it through</option>
         </select>
         <label for="contact-message">What are you seeing?</label>
-        <textarea id="contact-message" name="message" rows="4"></textarea>
+        <textarea id="contact-message" name="What are you seeing" rows="4" required></textarea>
         <button type="submit">Request More Info <span aria-hidden="true">→</span></button>
         <p id="contact-error" class="form-error" role="alert" hidden>We couldn’t send your request. Please email <a href="mailto:luke.progiant@71systems.com">luke.progiant@71systems.com</a>.</p>
       </form>
